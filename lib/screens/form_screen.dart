@@ -49,6 +49,7 @@ class _FormScreenState extends State<FormScreen> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: TextFormField(
+                    keyboardType: TextInputType.number,
                     controller: difficultController,
                     textAlign: TextAlign.left,
                     decoration: const InputDecoration(
@@ -61,6 +62,7 @@ class _FormScreenState extends State<FormScreen> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: TextFormField(
+                    keyboardType: TextInputType.url,
                     onChanged: (text) {
                       //Caso mudar, faz reload da tela
                       setState(() {});
