@@ -149,10 +149,12 @@ class _FormScreenState extends State<FormScreen> {
                         //Aviso de sucesso: esta no contexto desta tela
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(
-                            content: Text('Printando nova tarefa!'),
+                            content: Text('Tarefa salva com sucesso!'),
                             backgroundColor: Colors.green,
                           ),
                         );
+                        //Retorna para que chamou: para voltar sempre use POP!!!!
+                        Navigator.pop(context);
                       } else {
                         //Aviso de erro
                         ScaffoldMessenger.of(context).showSnackBar(
