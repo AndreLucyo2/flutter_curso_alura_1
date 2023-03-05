@@ -150,6 +150,15 @@ class _FormScreenState extends State<FormScreen> {
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(
                             content: Text('Printando nova tarefa!'),
+                            backgroundColor: Colors.green,
+                          ),
+                        );
+                      } else {
+                        //Aviso de erro
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text('Corrija as informações!'),
+                            backgroundColor: Colors.redAccent,
                           ),
                         );
                       }
