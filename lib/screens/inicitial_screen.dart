@@ -45,7 +45,11 @@ class _InicitialScreenState extends State<InicitialScreen> {
                 'https://img.elo7.com.br/product/main/3D91478/arquivo-digital-100-imagens-super-mario-png-alta-resolucao-png.jpg',
                 50),
             Tasks('Jogar',
-                'https://www.rbsdirect.com.br/imagesrc/35689144.jpg?w=700', 5)
+                'https://www.rbsdirect.com.br/imagesrc/35689144.jpg?w=700', 5),
+            //Espaço em branco para melhorar a experiencia
+            SizedBox(
+              height: 70,
+            )
           ],
         ),
       ),
