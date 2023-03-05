@@ -142,9 +142,16 @@ class _FormScreenState extends State<FormScreen> {
                     onPressed: () {
                       //Se estiver com um estado válid pode prosseguir
                       if (_formKey.currentState!.validate()) {
+                        //Caso seja válido...
                         print(nameController.text);
                         print(int.parse(difficultController.text));
                         print(imageController.text);
+                        //Aviso de sucesso: esta no contexto desta tela
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text('Printando nova tarefa!'),
+                          ),
+                        );
                       }
                     },
                   ),
