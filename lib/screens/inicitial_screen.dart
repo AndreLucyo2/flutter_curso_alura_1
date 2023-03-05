@@ -27,25 +27,12 @@ class _InicitialScreenState extends State<InicitialScreen> {
             Padding(
               padding: EdgeInsets.only(top: 8),
               //obtem a imagem da internet
-              child: Tasks(
-                  'Estudar Flutter',
-                  'https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large',
-                  2),
+              child: Tasks('Estudar Flutter', 'assets/images/02.png', 2),
             ),
-            Tasks(
-                'Andar de Bike',
-                'http://4.bp.blogspot.com/-3YwFT7wiDnE/VT5NLGC20qI/AAAAAAABC8Y/tQcMBoQkbEk/s1600/adffb142a07755f9fc4e1400e3491ae32.jpg',
-                10),
-            Tasks(
-                'Ler',
-                'https://i.pinimg.com/originals/e4/34/2a/e4342a4e0e968344b75cf50cf1936c09.jpg',
-                3),
-            Tasks(
-                'Meditar',
-                'https://img.elo7.com.br/product/main/3D91478/arquivo-digital-100-imagens-super-mario-png-alta-resolucao-png.jpg',
-                50),
-            Tasks('Jogar',
-                'https://www.rbsdirect.com.br/imagesrc/35689144.jpg?w=700', 5),
+            Tasks('Andar de Bike', 'assets/images/02.png', 10),
+            Tasks('Ler', 'assets/images/03.jpg', 3),
+            Tasks('Meditar', 'assets/images/04.jpg', 50),
+            Tasks('Jogar', 'assets/images/02.png', 5),
             //Espaço em branco para melhorar a experiencia
             SizedBox(
               height: 70,
