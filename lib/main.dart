@@ -1,3 +1,4 @@
+import 'package:alura_flutter_curso_1/data/task_inherited.dart';
 import 'package:alura_flutter_curso_1/screens/inicitial_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const InicitialScreen(),
+      //Sando o notificador de dados
+      home: TaskInherited(child: const InicitialScreen()),
     );
   }
 }
