@@ -20,6 +20,8 @@ class _InicitialScreenState extends State<InicitialScreen> {
       ),
       //Lista das tarefas
       body: ListView(
+        //ajuste o espaçamento
+        padding: const EdgeInsets.only(top: 8, bottom: 70),
         //invocando a herança de dados e passando o contexto:
         children: TaskInherited.of(context)!.taskList,
       ),
