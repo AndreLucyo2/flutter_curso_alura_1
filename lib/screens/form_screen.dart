@@ -1,7 +1,12 @@
+import 'package:alura_flutter_curso_1/data/task_inherited.dart';
 import 'package:flutter/material.dart';
 
 class FormScreen extends StatefulWidget {
-  const FormScreen({super.key});
+  //propriedade para receber um contexto
+  final BuildContext taskContext;
+
+  //contrutor que recebe um contexto
+  const FormScreen({super.key, required this.taskContext});
 
   @override
   State<FormScreen> createState() => _FormScreenState();
@@ -143,13 +148,22 @@ class _FormScreenState extends State<FormScreen> {
                       //Se estiver com um estado válid pode prosseguir
                       if (_formKey.currentState!.validate()) {
                         //Caso seja válido...
-                        print(nameController.text);
-                        print(int.parse(difficultController.text));
-                        print(imageController.text);
+                        // print(nameController.text);
+                        // print(int.parse(difficultController.text));
+                        // print(imageController.text);
+
+                        //Chama o metodo para criar e adicionar nova tarefa:
+                        //Recebe um contexto e usao o mesmo do app
+                        TaskInherited.of(widget.taskContext)?.newTask(
+                          nameController.text,
+                          imageController.text,
+                          int.parse(difficultController.text),
+                        );
+
                         //Aviso de sucesso: esta no contexto desta tela
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(
-                            content: Text('Tarefa salva com sucesso!'),
+                            content: Text('Criando nova tarefa com sucesso!'),
                             backgroundColor: Colors.green,
                           ),
                         );

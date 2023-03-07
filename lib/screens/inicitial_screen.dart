@@ -18,16 +18,19 @@ class _InicitialScreenState extends State<InicitialScreen> {
         title: const Text('Minhas Tarefas'),
         leading: Container(),
       ),
+      //Lista das tarefas
       body: ListView(
         //invocando a herança de dados e passando o contexto:
         children: TaskInherited.of(context)!.taskList,
       ),
+
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => const FormScreen(),
+              //Agora a nossa tela recebe o contexto do inicio do app
+              builder: (contextNew) => FormScreen(taskContext: context),
             ),
           );
         },

@@ -16,6 +16,14 @@ class Task extends StatefulWidget {
 class _TaskState extends State<Task> {
   int nivel = 0;
 
+  //Valida se a foto é interna ou veio da internet:
+  bool assetsOrNetwork() {
+    if (widget.foto.contains('http')) {
+      return false;
+    }
+    return true;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -52,10 +60,16 @@ class _TaskState extends State<Task> {
                       //imagem da tarefa:
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(4),
-                        child: Image.asset(
-                          widget.foto,
-                          fit: BoxFit.cover,
-                        ),
+                        //validando se a fota é interna ou da internet
+                        child: assetsOrNetwork()
+                            ? Image.asset(
+                                widget.foto,
+                                fit: BoxFit.cover,
+                              )
+                            : Image.network(
+                                widget.foto,
+                                fit: BoxFit.cover,
+                              ),
                       ),
                     ),
                     Column(
